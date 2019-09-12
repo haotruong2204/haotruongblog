@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="book-title">
+    <h1><%= @post.title %></h1>
+  </div>
+  <div class="book-content">
+    <h4><%=raw @post.description %></h4>
+    <%=raw @post.content %>
+  </div>
+  <div class="book-footer">
+    <i class="fa fa-calendar"></i> ngày đăng : <%= @post.created_at.strftime(" %d-%m-%Y ") %>
+  </div>
+</div>

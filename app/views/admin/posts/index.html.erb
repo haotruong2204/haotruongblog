@@ -1,0 +1,21 @@
+<%= link_to new_admin_post_path , class: "caption" do %>
+  <%= content_tag :i, "", class: "fa fa-pencil"%> Viết bài
+<% end %>
+<br>
+<br>
+<div class="clearfix"></div>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th><%= t(".title") %></th> -->
+      <th>Tiêu đề bài viết</th>
+      <th>Mô tả ngắn</th>
+      <th>Nội dung</th>
+      <th>Slug</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <%= render @posts %>
+</table>
+
