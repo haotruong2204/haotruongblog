@@ -4,7 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.5.1"
 
 gem "coffee-rails", "~> 4.2"
+gem 'devise', '~> 4.7', '>= 4.7.1'
 gem "jbuilder", "~> 2.5"
+gem "jquery-rails", "~> 4.3", ">= 4.3.5"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.3"
 gem "sass-rails", "~> 5.0"
@@ -14,12 +16,15 @@ gem "uglifier", ">= 1.3.0"
 # Rubocop convention
 gem "rubocop", "~> 0.74.0", require: false
 
+#Tree
+gem "jstree-rails-4"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "sqlite3"
+  gem 'mysql2', '~> 0.5.2'
 end
 
 group :development do
