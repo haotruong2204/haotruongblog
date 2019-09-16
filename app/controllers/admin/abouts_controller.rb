@@ -1,7 +1,7 @@
 class Admin::AboutsController < Admin::BaseController
   def index
-    @q = About.ransack(params[:q])
-    @abouts = @q.result.page(params[:page]).per(Settings.per_page.default)
+    @q = About.ransack params[:q]
+    @abouts = @q.result.page(params[:page]).per Settings.per_page.default
   end
 
   def new
@@ -45,6 +45,6 @@ class Admin::AboutsController < Admin::BaseController
 
   private
   def params_about
-    params.require(:about).permit(About::ATTRS)
+    params.require(:about).permit About::ATTRS
   end
 end

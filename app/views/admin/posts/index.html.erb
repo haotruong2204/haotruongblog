@@ -2,6 +2,14 @@
   <%= content_tag :i, "", class: "fas fa-feather-alt" %> Create Post
 <% end %>
 <br>
+<% if @posts.any? %>
+  <%= search_form_for @q, url: admin_posts_path do |f| %>
+    <div class="form-group">
+      <%= f.search_field :title_cont, class: "form-control", placeholder: "Search post... " %>
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+<% end %>
 <br>
 <div class="clearfix"></div>
 <br>
