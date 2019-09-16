@@ -1,5 +1,5 @@
-<%= link_to new_admin_post_path , class: "caption" do %>
-  <%= content_tag :i, "", class: "fas fa-feather-alt" %> Create Post
+<%= link_to new_admin_about_path , class: "caption" do %>
+  <%= content_tag :i, "", class: "fas fa-feather-alt"%> Create Post About Us
 <% end %>
 <br>
 <br>
@@ -12,10 +12,10 @@
       <th>Title</th>
       <th>Description</th>
       <th>Content</th>
-      <th>Slug</th>
+      <th>Display</th>
       <th colspan="2"></th>
     </tr>
   </thead>
-  <%= render @posts %>
+  <%= render @abouts %>
 </table>
 
