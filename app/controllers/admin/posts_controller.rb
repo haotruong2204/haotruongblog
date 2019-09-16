@@ -10,7 +10,7 @@ class Admin::PostsController < Admin::BaseController
   def create
     @post = Post.new params_post
     if @post.save
-      flash[:success] = "Tạo bài viết thành công!"
+      flash[:success] = "Create Post Success!"
       redirect_to admin_posts_path
     else
       render "new"
@@ -28,7 +28,7 @@ class Admin::PostsController < Admin::BaseController
   def update
     @post = Post.find_by id: params[:id]
     if @post.update_attributes params_post
-      flash[:success] = "Cập nhật bài viết thành công!"
+      flash[:success] = "Update Post Success!"
       redirect_to admin_posts_path
     else
       render "edit"
@@ -37,7 +37,7 @@ class Admin::PostsController < Admin::BaseController
 
   def destroy
     Post.find_by(id: params[:id]).destroy
-    flash[:success] = "Xoá bài viết thành công !"
+    flash[:success] = "Delete Post Success."
     redirect_to admin_posts_path
   end
 

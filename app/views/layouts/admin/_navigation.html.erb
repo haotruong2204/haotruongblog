@@ -7,7 +7,7 @@
         <% end %>
       </li>
       <li class="treeview menu-open">
-        <a href="#"><span>Bài viết</span>
+        <a href="#"><span>Posts</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -15,20 +15,26 @@
         <ul class="treeview-menu" style="display: block;">
           <li class="<%= 'active' if controller_name == 'dashboard' %>">
             <%= link_to admin_posts_path do %>
-              <i class="fa fa-book"></i>
-              <span>Tất cả bài viết</span>
+              <i class="far fa-newspaper"></i>
+              <span>Posts</span>
             <% end %>
           </li>
           <li class="<%= 'active' if controller_name == 'dashboard' %>">
             <%= link_to "#" do %>
               <i class="fa fa-align-justify"></i>
-              <span>Danh mục bài viết</span>
+              <span>Categoty</span>
+            <% end %>
+          </li>
+          <li class="<%= 'active' if controller_name == 'dashboard' %>">
+            <%= link_to admin_abouts_path do %>
+              <i class="far fa-address-card"></i>
+              <span>About Us</span>
             <% end %>
           </li>
         </ul>
       </li>
       <li class="treeview menu-open">
-        <a href="#"><span>Quản lý</span>
+        <a href="#"><span>Manage</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -37,13 +43,13 @@
           <li class="<%= 'active' if controller_name == 'dashboard' %>">
             <%= link_to "#" do %>
               <i class="fa fa-users"></i>
-              <span>Quản lý người dùng</span>
+              <span>Users</span>
             <% end %>
           </li>
         </ul>
       </li>
       <li class="treeview menu-open">
-        <a href="#"><span>Lịch sử</span>
+        <a href="#"><span>History</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -52,7 +58,7 @@
           <li class="<%= 'active' if controller_name == 'dashboard' %>">
             <%= link_to "#" do %>
               <i class="fa fa-history"></i>
-              <span>Lịch sử người dùng</span>
+              <span>user history</span>
             <% end %>
           </li>
         </ul>
