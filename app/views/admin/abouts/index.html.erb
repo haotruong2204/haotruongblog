@@ -2,6 +2,14 @@
   <%= content_tag :i, "", class: "fas fa-feather-alt"%> Create Post About Us
 <% end %>
 <br>
+<% if @abouts.any? %>
+  <%= search_form_for @q, url: admin_abouts_path do |f| %>
+    <div class="form-group">
+      <%= f.search_field :title_cont, class: "form-control", placeholder: "Search about... " %>
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+<% end %>
 <br>
 <div class="clearfix"></div>
 <br>

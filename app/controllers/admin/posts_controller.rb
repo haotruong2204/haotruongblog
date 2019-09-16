@@ -1,6 +1,7 @@
 class Admin::PostsController < Admin::BaseController
   def index
-    @posts = Post.all
+    @q = Post.ransack params[:q]
+    @posts = @q.result.page(params[:page]).per Settings.per_page.default
   end
 
   def new
@@ -43,6 +44,6 @@ class Admin::PostsController < Admin::BaseController
 
   private
   def params_post
-    params.require(:post).permit(Post::ATTRS)
+    params.require(:post).permit Post::ATTRS
   end
 end
