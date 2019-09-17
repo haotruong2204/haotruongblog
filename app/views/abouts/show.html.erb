@@ -3,7 +3,9 @@
     <h1><i class="fab fa-jedi-order"></i> <%= @about.title %></h1>
   </div>
   <div class="about-content">
-    <h4><%=raw @about.description %></h4>
+    <div class="description">
+      <h4><%=raw @about.description %></h4>
+    </div>
     <%=raw @about.content %>
   </div>
   <div class="about-image">
