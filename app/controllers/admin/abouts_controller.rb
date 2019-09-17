@@ -29,7 +29,7 @@ class Admin::AboutsController < Admin::BaseController
 
   def update
     @about = About.find_by id: params[:id]
-    if @about.update_atrriutes params_about
+    if @about.update_attributes params_about
       flash[:success] = "Update About Post Success!"
       redirect_to admin_abouts_path
     else
