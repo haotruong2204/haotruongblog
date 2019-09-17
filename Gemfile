@@ -35,7 +35,9 @@ gem "bootstrap-kaminari-views"
 # Upload file
 gem "carrierwave"
 gem "mini_magick"
-gem "fog"
+
+# Multi language
+gem 'rails-i18n'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
