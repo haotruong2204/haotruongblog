@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/about" => "abouts#show"
   root "home_pages#index"
   namespace :admin do
     mount Ckeditor::Engine => "/ckeditor"

@@ -265,24 +265,24 @@ a:hover {
 .page-top .nav {
     list-style: none;
     font-weight: 700;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .page-top .nav ul {
-    margin: 8px 0 10px 20px
+    margin: 8px 0 10px 20px;
 }
 
 .page-top .nav li {
     position: relative;
     display: initial;
-    padding-right: 15px
+    padding-right: 15px;
 }
 
 .page-top .nav li:not(:last-child):after {
     content: '';
     padding-left: 15px;
     color: #aaa;
-    border-right: 1px solid #dbdbdb
+    border-right: 1px solid #dbdbdb;
 }
 
 .page-top .nav a {
@@ -290,41 +290,42 @@ a:hover {
 }
 
 .page-top .nav a:hover {
-    color: #4786D6
+    color: #4786D6;
+    text-decoration: none;
 }
 
 .page-top .nav a.current {
     color: #5A5A5A;
     padding-bottom: 12px;
-    border-bottom: 1px solid #5A5A5A
+    border-bottom: 1px solid #5A5A5A;
 }
 
 .page-top .information {
     float: right;
     padding-top: 12px;
     padding-right: 20px;
-    margin-top: -4px
+    margin-top: -4px;
 }
 
 .page-top .information .avatar {
-    float: right
+    float: right;
 }
 
 .page-top .information .avatar img {
     width: 32px;
     height: 32px;
-    border-radius: 300px
+    border-radius: 300px;
 }
 
 .page-top .information .back_btn {
     float: left;
     padding-top: 5px;
-    margin-right: -10px
+    margin-right: -10px;
 }
 
 .page-top .information .back_btn li {
     display: initial;
-    padding-right: 40px
+    padding-right: 40px;
 }
 
 .sidebar {
