@@ -4,6 +4,9 @@
 .toggle-menu {
   display: none !important;
 }
+.about-image img{
+  width: 100%;
+}
 @media (max-width: 768px){
   .nav-mobile {
     display: none;
@@ -39,5 +42,4 @@
   .page-top .nav ul:after {
     display: block;
   }
-
 }

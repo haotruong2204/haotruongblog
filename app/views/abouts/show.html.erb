@@ -1,15 +1,15 @@
-<div class="container">
-  <div class="book-title">
+<div class="post animated fadeInDown">
+  <div class="about-title">
     <h1><i class="fab fa-jedi-order"></i> <%= @about.title %></h1>
   </div>
-  <div class="book-content">
+  <div class="about-content">
     <h4><%=raw @about.description %></h4>
     <%=raw @about.content %>
   </div>
-  <% if @about.image? %>
-    <%= image_tag @about.image.url %>
-  <% end %>
-  <div class="book-footer">
-    <i class="fa fa-calendar"></i> ngày đăng : <%= @about.created_at.strftime(" %d-%m-%Y ") %>
+  <div class="about-image">
+    <% if @about.image? %>
+      <%= image_tag @about.image.url %>
+    <% end %>
   </div>
 </div>
+
