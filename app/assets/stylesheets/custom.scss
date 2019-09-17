@@ -1,5 +1,39 @@
+.page-top .nav li {
+  display: block;
+}
+.toggle-menu {
+  display: none !important;
+}
 @media (max-width: 768px){
-  .nav-desktop {
+  .nav-mobile {
     display: none;
+  }
+  .page-top .nav li:not(:nth-child(3)) {
+    display: none;
+  }
+  .toggle-menu {
+    display: block !important;
+    float: right;
+  }
+  .responsive {
+    position: relative;
+    background: #fff;
+  }
+  .responsive .toggle-menu {
+    position: absolute !important;
+    right: 0;
+    top: 10px;
+  }
+  .page-top .responsive li {
+    display: block !important;
+  }
+  .page-top .responsive li:nth-child(3) {
+    display: none !important;
+  }
+  .page-top .nav li:not(:last-child):after {
+    border: none;
+  }
+  .page-top .nav ul:after {
+    display: block;
   }
 }

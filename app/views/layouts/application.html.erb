@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Hảo Trương">
-    <title>Hảo Trương</title>
-    <meta name="description" content="A Blog Powered By Hexo">
+    <title><%= yield(:title) %></title>
+    <meta name="description" content="Thà làm con kiến tự do còn hơn chúa sơn lâm ở trong cũi">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
@@ -24,6 +24,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/sidebar" %>
+    <div class="main">
+      <%= render "layouts/header" %>
+      <div class="autopagerize_page_element">
+        <div class="content">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
