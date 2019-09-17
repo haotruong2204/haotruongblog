@@ -17,7 +17,10 @@
   }
   .responsive {
     position: relative;
-    background: #fff;
+    background: #575e6c;
+  }
+  .responsive  ul li a {
+    color: #fff !important;
   }
   .responsive .toggle-menu {
     position: absolute !important;
@@ -31,9 +34,10 @@
     display: none !important;
   }
   .page-top .nav li:not(:last-child):after {
-    border: none;
+    border-right: 1px solid #575e6c !important;
   }
   .page-top .nav ul:after {
     display: block;
   }
+
 }
