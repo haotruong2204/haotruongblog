@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  get 'posts/show'
   scope "(:locale)", locale: /en|vi/ do
-    get "/about" => "abouts#show"
-    root "home_pages#index"
     namespace :admin do
       mount Ckeditor::Engine => "/ckeditor"
       devise_for :admins, path: "", path_names: { sign_in: "login", sign_out: "logout" }
@@ -9,5 +8,8 @@ Rails.application.routes.draw do
       resources :posts
       resources :abouts
     end
+    root "home_pages#index"
+    resources :posts, param: :slug
+    get "/about" => "abouts#show"
   end
 end

@@ -7,6 +7,6 @@
     <%=raw @post.content %>
   </div>
   <div class="book-footer">
-    <i class="fa fa-calendar"></i> ngày đăng : <%= @post.created_at.strftime(" %d-%m-%Y ") %>
+    <i class="fa fa-calendar"></i> ngày đăng : <%= @post.created_at.strftime(Settings.date.formats) %>
   </div>
 </div>
