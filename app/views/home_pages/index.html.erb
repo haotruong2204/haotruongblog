@@ -1,23 +1,27 @@
 <%= provide :title, "Hảo trương | Cả một bầu trời xàm xí" %>
 
-<% @posts.each do |post| %>
-  <div class="post animated fadeInDown">
-    <div class="post-title">
-      <h2>
-        <%= link_to post_path(post) do %>
-          <i class="fab fa-twitter"></i> <%= post.title %>
-        <% end %>
-      </h2>
-    </div>
-    <div class="post-content">
-      <p><%= post.description %></p>
-    </div>
-    <div class="post-footer">
-      <div class="meta">
-        <div class="info"><i class="far fa-clock"></i><span class="date"><%= post.created_at.strftime(Settings.date.formats) %></span></div>
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
+    <div class="post animated fadeInDown">
+      <div class="post-title">
+        <h2>
+          <%= link_to post_path(post) do %>
+            <i class="fab fa-twitter"></i> <%= post.title %>
+          <% end %>
+        </h2>
+      </div>
+      <div class="post-content">
+        <p><%= post.description %></p>
+      </div>
+      <div class="post-footer">
+        <div class="meta">
+          <div class="info"><i class="far fa-clock"></i><span class="date"><%= post.created_at.strftime(Settings.date.formats) %></span></div>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
+<% else %>
+  <p><i>Đôi lúc muốn tĩnh lặng 1 chút</i></p>
 <% end %>
 <!-- <div class="pagination">
   <ul class="clearfix">
