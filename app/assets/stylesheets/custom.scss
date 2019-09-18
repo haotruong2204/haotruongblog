@@ -77,3 +77,18 @@
     float: none !important;
   }
 }
+.highlight {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  .h1 {
+    color: #e83e8c;
+  }
+  .nt {
+    color: #fff;
+  }
+  .cp {
+    color: #bc9458;
+  }
+}
