@@ -5,6 +5,10 @@ ruby "2.5.1"
 
 gem "coffee-rails", "~> 4.2"
 gem "devise", "~> 4.7", ">= 4.7.1"
+# OmniAuth for Facebook
+gem "omniauth-facebook", "~> 4.0"
+# ENV
+gem "figaro"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "~> 4.3", ">= 4.3.5"
 gem "puma", "~> 3.11"
