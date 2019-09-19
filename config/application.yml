@@ -9,7 +9,7 @@
 # production:
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
-
+SITE_DOMAIN: "https://ancient-temple-04915.herokuapp.com/"
 FACEBOOK_APP_ID: "2390246831244382"
 FACEBOOK_APP_SECRET: "f9dde8e5dd9a2c72ba46fac4c1bc3022"
 
