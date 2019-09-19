@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'posts/show'
   scope "(:locale)", locale: /en|vi/ do
     namespace :admin do
       mount Ckeditor::Engine => "/ckeditor"
@@ -12,5 +10,7 @@ Rails.application.routes.draw do
     root "home_pages#index"
     resources :posts, param: :slug
     get "/about" => "abouts#show"
+
   end
+    devise_for :users, controllers: {omniauth_callbacks: "accounts/omniauth_callbacks"}
 end
