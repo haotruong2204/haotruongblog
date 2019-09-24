@@ -7,6 +7,8 @@ gem "coffee-rails", "~> 4.2"
 gem "devise", "~> 4.7", ">= 4.7.1"
 # OmniAuth for Facebook
 gem "omniauth-facebook", "~> 4.0"
+# OmniAuth for Google
+gem "omniauth-google-oauth2", "~> 0.4.1"
 # ENV
 gem "figaro"
 gem "jbuilder", "~> 2.5"

@@ -6,8 +6,18 @@
         <a class="<%= 'current' if params[:controller] == "abouts" %>" href="<%= about_path %>" title="">Am Hia(I'm Here)</a>
       </li>
       <li>
-        <%= link_to(user_facebook_omniauth_authorize_path) do %>
-          <i class="fab fa-facebook-f"></i> Kết nối, kết nối nào !
+        <% if user_signed_in? %>
+          <%= image_tag current_user.avatar, class: "avatar-social" %>
+          <span class="text-name-social">
+            <%= current_user.name %>,
+          </span>
+          <%= link_to destroy_user_session_path do %>
+            <i class="fas fa-sign-out-alt"></i>
+          <% end %>
+        <% else %>
+          <%= link_to(user_facebook_omniauth_authorize_path) do %>
+            <i class="fab fa-facebook-f"></i> Kết nối, kết nối nào !
+          <% end %>
         <% end %>
       </li>
       <li class="toggle-menu">
