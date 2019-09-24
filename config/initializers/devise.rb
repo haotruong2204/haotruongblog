@@ -296,7 +296,7 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-  config.omniauth :facebook, "2390246831244382", ENV["FACEBOOK_APP_SECRET"],
+  config.omniauth :facebook, "2390246831244382", "f9dde8e5dd9a2c72ba46fac4c1bc3022",
                   scope: "public_profile,email",
-                  callback_url: "https://#{ENV['SITE_DOMAIN']}/users/auth/facebook/callback"
+                  callback_url: "https://ancient-temple-04915.herokuapp.com/users/auth/facebook/callback"
 end
