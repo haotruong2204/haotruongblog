@@ -97,7 +97,7 @@ gem "nokogiri"
 gem "friendly_id", "~> 5.4.0"
 
 # Paginate
-gem "pagy"
+gem "pagy", "~> 7.0"
 
 # Search
 gem "ransack"
