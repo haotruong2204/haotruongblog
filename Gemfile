@@ -113,3 +113,6 @@ gem "config"
 gem "ckeditor"
 gem "mini_magick"
 gem "image_processing", "~> 1.2"
+
+# Upload file to S3 AWS
+gem "aws-sdk-s3", "~> 1"

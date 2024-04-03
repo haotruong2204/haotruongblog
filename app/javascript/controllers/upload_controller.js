@@ -44,7 +44,6 @@ export default class extends Controller {
     
     let token = $("meta[name='csrf-token']").attr("content");
     const url = $(".remove-img").data("href");
-    
     $.ajax({
       url: url,
       method: "DELETE",

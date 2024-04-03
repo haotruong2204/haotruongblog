@@ -11,7 +11,7 @@
   <td>
     <div class="post__image">
       <% if category.image_url.present? %>
-        <%= image_tag category.image_url, class: "size-80" %>
+        <img src="<%= ENV['S3_URL_PREFIX'] %><%= category.image_url.key %>" alt="" class="size-80">
       <% else %>
         <img src="<%= asset_path("80x80.png") %>" alt="icon-default">
       <% end %>

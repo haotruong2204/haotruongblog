@@ -41,7 +41,9 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def delete_image_attachment
-    @image = ActiveStorage::Attachment.find(params[:id])
+    @image = ActiveStorage::Attachment.find(params[:slug])
+    aws_service = AwsService.new
+    aws_service.remove_image @image.key
     @image.purge_later
   end
 

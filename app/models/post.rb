@@ -31,7 +31,6 @@ class Post < ApplicationRecord
   has_many :ip_view_posts, dependent: :destroy
   belongs_to :category
   belongs_to :admin
-  has_many :comments, dependent: :destroy
 
   enum status: { hidden: 1, visible: 2 }
 

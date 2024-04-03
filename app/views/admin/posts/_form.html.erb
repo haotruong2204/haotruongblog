@@ -25,7 +25,7 @@
           <label for="feature-image" class="form-label">Ảnh bìa</label>
           <div class="field__image"
             <% if f.object.cover_image.present? %>
-              style='background-image: url("<%= url_for(f.object.cover_image) %>"); background-size:100% 100%'
+              style='background-image: url("<%= ENV['S3_URL_PREFIX'] %><%= f.object.cover_image.key %>"); background-size:100% 100%'
             <% end %>
           >
             <% if f.object&.cover_image&.id.present? %>
